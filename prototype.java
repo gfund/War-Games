@@ -1,3 +1,4 @@
+/*
 for (int i=0; i < sampleArray.length; i++){
      if ( sampleArray[i].equals("a") ) {
         System.out.println("apple");
@@ -19,3 +20,5 @@ ArrayList<String> options = new ArrayList<String>();
 
 // String input
     String Answer = myObj.nextLine();
+*/ 
+//commented out because it was causing trouble, DK 

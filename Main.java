@@ -1,19 +1,36 @@
 //Purpose to produce an AI simliar to the AI From the movie WarGames
 import java.util.Scanner;
-import java.util.ArrayList; 
+import java.util.*;
 
 public class Main {
-  
-  
 
-  public static  void main(String[] args) {
+  static List<String>  options = new ArrayList<>(List.of("Thermonuclear War","Chess","Checkers","Backgammon","Poker","Falken's maze","Theaterwide Biotoxic and Chemical Warfare"));
+  public static void consoleprint(String output) throws InterruptedException{
 
-  
+    for (char i :output.toCharArray()){
+
+        System.out.print("\u001b[38;5;34m"+i+"\u001B[0m");
         
- 
+        Thread.sleep(100);
+   
+    }
+   
+      
+  }
+  
+  
+  
+  public static  void main(String[] args) throws InterruptedException {
+
+    
 Scanner myObj = new Scanner(System.in);
 
-  System.out.println("Shall we play a game?");
+  try {
+    consoleprint("Shall we play a game?");
+  } catch (InterruptedException e) {
+    // TODO Auto-generated catch block
+    e.printStackTrace();
+  }
 
     // String input
     String Response = myObj.nextLine();
@@ -24,21 +41,15 @@ if(Response.equalsIgnoreCase("yes")){
 
 
     //array list of options
-ArrayList<String> options = new ArrayList<String>();
-    options.add("Thermonuclear War");
-    options.add("Chess");
-    options.add("Checkers");
-    options.add("Backgammon");
-    options.add("Poker");
-    options.add("Falken's maze");
-    options.add("Theaterwide Biotoxic and Chemical Warfare");
-    System.out.println(options);
+   
+   
+    consoleprint(options.toString()+'\n');
 
 // String input
     String Answer = myObj.nextLine();
 
     //Bring the if statements
-  if(Answer.equals(options)){ //reference stuff in array
+  if(true){ //reference stuff in array
 
     if(Answer.equalsIgnoreCase("Thermonuclear War")){
       System.out.println("Preparing Thermonuclear War");
